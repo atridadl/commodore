@@ -1,0 +1,38 @@
+{
+  "name": "twitch-helper",
+  "private": true,
+  "sideEffects": false,
+  "type": "module",
+  "scripts": {
+    "build": "remix build",
+    "dev": "remix dev --manual",
+    "start": "remix-serve ./build/index.js",
+    "typecheck": "tsc"
+  },
+  "dependencies": {
+    "@clerk/remix": "^3.1.5",
+    "@remix-run/css-bundle": "^2.3.0",
+    "@remix-run/node": "^2.3.0",
+    "@remix-run/react": "^2.3.0",
+    "@remix-run/serve": "^2.3.0",
+    "isbot": "^3.7.1",
+    "lucide-react": "^0.292.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "remix-utils": "^7.1.0"
+  },
+  "devDependencies": {
+    "@flydotio/dockerfile": "^0.4.10",
+    "@remix-run/dev": "^2.3.0",
+    "@remix-run/eslint-config": "^2.3.0",
+    "@types/react": "^18.2.37",
+    "@types/react-dom": "^18.2.15",
+    "daisyui": "^4.4.2",
+    "eslint": "^8.54.0",
+    "tailwindcss": "^3.3.5",
+    "typescript": "^5.2.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
