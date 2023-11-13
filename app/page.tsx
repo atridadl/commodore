@@ -47,7 +47,7 @@ export default async function Home() {
           Sign in to get started!
         </h2>
 
-        <SignInButton afterSignInUrl="/" afterSignUpUrl="/">
+        <SignInButton>
           <button className="btn btn-primary">
             <Twitch /> Sign in with Twitch
           </button>

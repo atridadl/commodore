@@ -19,10 +19,10 @@ export default function RootLayout({
 }) {
   return (
     <ClerkProvider
-      afterSignInUrl="/"
-      afterSignUpUrl="/"
-      signInUrl="/sign-in"
-      signUpUrl="/sign-up"
+      afterSignInUrl={process.env.NEXT_PUBLIC_ROOT_URL!}
+      afterSignUpUrl={process.env.NEXT_PUBLIC_ROOT_URL!}
+      signInUrl={`${process.env.NEXT_PUBLIC_ROOT_URL!}/sign-in`}
+      signUpUrl={`${process.env.NEXT_PUBLIC_ROOT_URL!}/sign-up`}
       appearance={{
         baseTheme: dark,
       }}
