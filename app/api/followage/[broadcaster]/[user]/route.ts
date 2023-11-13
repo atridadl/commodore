@@ -38,7 +38,7 @@ export async function GET(
 
   const tokenResponse = await getTokenResponse.json();
 
-  console.log(tokenResponse);
+  console.log("🟢 FollowAge called!");
 
   const token = tokenResponse[0].token;
 
