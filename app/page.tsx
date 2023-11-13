@@ -14,7 +14,7 @@ export default async function Home() {
   return (
     <main className="flex flex-col text-center items-center justify-center px-4 py-16 gap-4">
       <div className="fixed top-2 right-2">
-        <UserButton />
+        <UserButton afterSignOutUrl="/" />
       </div>
       <h1 className="text-4xl sm:text-6xl bg-gradient-to-r from-pink-500 to-blue-500 bg-clip-text text-transparent">
         Atri&apos;s Twitch Command Helpers
@@ -47,7 +47,7 @@ export default async function Home() {
           Sign in to get started!
         </h2>
 
-        <SignInButton>
+        <SignInButton afterSignInUrl="/" afterSignUpUrl="/">
           <button className="btn btn-primary">
             <Twitch /> Sign in with Twitch
           </button>
