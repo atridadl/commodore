@@ -48,7 +48,7 @@ export default async function Home() {
         </h2>
 
         <SignInButton>
-          <button className="btn btn-active btn-primary">
+          <button className="btn btn-primary">
             <Twitch /> Sign in with Twitch
           </button>
         </SignInButton>

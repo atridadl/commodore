@@ -24,10 +24,7 @@ const CommandItem = ({ title, command }: CommandItemProps) => {
         className="input input-bordered w-full min-w-full"
         disabled
       />
-      <button
-        className="btn btn-active btn-secondary"
-        onClick={handleCopyClick}
-      >
+      <button className="btn btn-secondary" onClick={handleCopyClick}>
         {copied ? "Copied!" : "Copy"}
       </button>
     </div>
