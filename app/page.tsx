@@ -7,9 +7,11 @@ import {
 } from "@clerk/nextjs";
 import CommandItem from "./_components/CommandItem";
 import { Twitch } from "lucide-react";
+import { useRouter } from "next/router";
 
 export default async function Home() {
   const user = await currentUser();
+  const router = useRouter();
 
   return (
     <main className="flex flex-col text-center items-center justify-center px-4 py-16 gap-4">
@@ -47,11 +49,12 @@ export default async function Home() {
           Sign in to get started!
         </h2>
 
-        <SignInButton>
-          <button className="btn btn-primary">
-            <Twitch /> Sign in with Twitch
-          </button>
-        </SignInButton>
+        <button
+          className="btn btn-primary"
+          onClick={() => void router.push("/sign-in")}
+        >
+          <Twitch /> Sign in with Twitch
+        </button>
       </SignedOut>
 
       <br />
