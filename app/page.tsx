@@ -1,22 +1,14 @@
-import {
-  SignInButton,
-  SignedIn,
-  SignedOut,
-  UserButton,
-  currentUser,
-} from "@clerk/nextjs";
+import { SignedIn, SignedOut, UserButton, currentUser } from "@clerk/nextjs";
 import CommandItem from "./_components/CommandItem";
 import { Twitch } from "lucide-react";
-import { useRouter } from "next/router";
 
 export default async function Home() {
   const user = await currentUser();
-  const router = useRouter();
 
   return (
     <main className="flex flex-col text-center items-center justify-center px-4 py-16 gap-4">
       <div className="fixed top-2 right-2">
-        <UserButton afterSignOutUrl="/" />
+        <UserButton afterSignOutUrl="/" userProfileMode="modal" />
       </div>
       <h1 className="text-4xl sm:text-6xl bg-gradient-to-r from-pink-500 to-blue-500 bg-clip-text text-transparent">
         Atri&apos;s Twitch Command Helpers
@@ -49,12 +41,9 @@ export default async function Home() {
           Sign in to get started!
         </h2>
 
-        <button
-          className="btn btn-primary"
-          onClick={() => void router.push("/sign-in")}
-        >
+        <a className="btn btn-primary" href="/sign-in">
           <Twitch /> Sign in with Twitch
-        </button>
+        </a>
       </SignedOut>
 
       <br />

@@ -1,5 +1,12 @@
 import { SignUp } from "@clerk/nextjs";
 
 export default function Page() {
-  return <SignUp path="/sign-up" routing="path" signInUrl="/sign-in" />;
+  return (
+    <SignUp
+      path="/sign-up"
+      routing="path"
+      signInUrl="/sign-in"
+      redirectUrl={process.env.ROOT_URL!}
+    />
+  );
 }
