@@ -28,7 +28,7 @@ export default function Page() {
       path="/sign-in"
       routing="path"
       signUpUrl="/sign-up"
-      redirectUrl={process.env.ROOT_URL!}
+      redirectUrl={process.env.ROOT_URL ? process.env.ROOT_URL : "/"}
     />
   );
 }
