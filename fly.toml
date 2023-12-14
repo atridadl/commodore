@@ -1,18 +1,23 @@
-# fly.toml app configuration file generated for twitch-helpers on 2023-11-19T00:28:09-07:00
+# fly.toml app configuration file generated for commodore on 2023-12-13T23:43:27-07:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = "twitch-helpers"
+app = "commodore"
 primary_region = "sea"
 swap_size_mb = 512
 
 [build]
 
 [http_service]
-internal_port = 3000
-force_https = true
-auto_stop_machines = true
-auto_start_machines = true
-min_machines_running = 0
-processes = ["app"]
+  internal_port = 3000
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ["app"]
+
+[[vm]]
+  cpu_kind = "shared"
+  cpus = 1
+  memory_mb = 256

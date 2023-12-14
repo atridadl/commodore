@@ -1,15 +1,6 @@
 import type { LoaderFunctionArgs } from "@remix-run/node";
 import { json } from "@remix-run/node";
 
-function monthDayDifference(date1: Date, date2: Date) {
-  const timeDifference = Math.abs(date2.getTime() - date1.getTime());
-  const daysDifference = timeDifference / (1000 * 60 * 60 * 24);
-  const monthsDifference = Math.floor(daysDifference / 30.44); // The average number of days in a month
-  const remainingDays = Math.round(daysDifference % 30.44);
-
-  return { months: monthsDifference, days: remainingDays };
-}
-
 export const loader = async ({ request, params }: LoaderFunctionArgs) => {
   const url = new URL(request.url);
 

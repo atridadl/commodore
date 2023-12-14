@@ -1,1 +1,3 @@
-# Atri's Twitch Helpers
+# Commodore
+
+Helpful Nightbot Helpers for Twitch

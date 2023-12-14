@@ -22,8 +22,8 @@ export const links: LinksFunction = () => [
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "Atri's Twitch Helpers" },
-    { name: "description", content: "Atri's Twitch Helpers" },
+    { title: "Commodore" },
+    { name: "description", content: "Helpful Nightbot Helpers for Twitch" },
   ];
 };
 

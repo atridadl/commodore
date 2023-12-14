@@ -1,7 +1,6 @@
-import { SignedIn, SignedOut, UserButton } from "@clerk/remix";
+import { SignedIn, SignedOut, UserButton, useUser } from "@clerk/remix";
 import CommandItem from "./components/CommandItem";
 import { Twitch } from "lucide-react";
-import { useUser } from "@clerk/remix";
 
 export default function Index() {
   const { user } = useUser();
@@ -12,7 +11,7 @@ export default function Index() {
         <UserButton afterSignOutUrl="/" userProfileMode="modal" />
       </div>
       <h1 className="text-4xl sm:text-6xl bg-gradient-to-r from-pink-500 to-blue-500 bg-clip-text text-transparent">
-        Atri&apos;s Twitch Helpers
+        Commodore
       </h1>
 
       <br />
