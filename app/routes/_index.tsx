@@ -27,12 +27,12 @@ export default function Index() {
         <h2 className="text-2xl">Nightbot Command Helpers</h2>
         <CommandItem
           title="followage"
-          command={`$(eval const res = $(urlfetch https://commands.atri.dad/api/followage/$(channel)/$(user)?uid=${user?.id}); res.string)`}
+          command={`$(eval const res = $(urlfetch https://commodore.atri.dad/api/followage/$(channel)/$(user)?uid=${user?.id}); res.string)`}
         />
 
         <CommandItem
           title="subcount"
-          command={`$(eval const res = $(urlfetch https://commands.atri.dad/api/subcount/$(channel)?uid=${user?.id}); res.string)`}
+          command={`$(eval const res = $(urlfetch https://commodore.atri.dad/api/subcount/$(channel)?uid=${user?.id}); res.string)`}
         />
       </SignedIn>
 
